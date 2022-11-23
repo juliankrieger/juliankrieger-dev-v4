@@ -1,0 +1,51 @@
+@use super::base;
+@()
+
+@:base(None, {
+    <div>
+        <h2>Freelancing</h2>
+        <p>I do freelancing on the side when I get the chance. When I have the choice, this happens mostly
+            on the <a href="https://www.mongodb.com/mern-stack">MERN</a> Stack, although I like switching up
+            Express with alternative server solutions. If a customer wishes for static rendering and small bundles,
+            I reach for <a href="https://nextjs.org/">Next.js</a>. To make deployment and delivery easy, I bundle all my apps inside <a href="https://www.docker.com/">Docker</a>, but deploying on serverless platforms is also possible.
+        </p>
+
+        <h4>Gallery</h4>
+        <p>A gallery of some of my recent and/or noteworthy freelancing projects</p>
+        <div class="GalleryGrid">
+            <div class=GalleryItem>
+                <h5 class=Title>
+                    DigiPIL
+                </h5>
+                <img src="/static/images/DigiPIL.jpeg" alt="DigiPIL Platform"></img>
+                <p>Online Platform for seraching and managing Patient Information Leaflets (PIL). Customers can register or login and save a list of their current medications along with a list of conditions. Shows possible interactions and side effects.</p>
+                <ul>
+                    <li class="Tag">
+                        Proof of Concept
+                    </li>
+                    -
+                    <li class="Tag">
+                        Persistent Database
+                    </li>
+                    -
+                    <li class="Tag">
+                        Database Admin Interface
+                    </li>
+                    -
+                    <li class="Tag">
+                        Session Cookie Authentification
+                    </li>
+                    -
+                    <li class="Tag">
+                        Docker Deployment
+                    </li>
+                    -
+                    <li class="Tag">
+                        IBM Carbon Framework
+                    </li>
+                    -
+                </ul>
+            </div>
+        </div>
+    </div>
+})

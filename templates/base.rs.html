@@ -1,0 +1,20 @@
+@use super::layout;
+
+@(title: Option<&str>, body: Content)
+<html>
+  <head>
+    @if title.is_some() {      
+     <title>title.unwrap()</title>
+    } else {
+      <title>juliankrieger.dev</title>
+    }
+    <meta name="viewport" content="initial-scale=1.0" width="device-width"></meta>
+    <meta name="description" content="Julian Krieger's personal website"></meta>
+  </head>
+  <body>
+    @:layout({
+      @:body()
+    })  
+  </body>
+  
+</html>

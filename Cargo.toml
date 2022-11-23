@@ -1,0 +1,44 @@
+build = "build.rs"
+
+[build-dependencies]
+ructe = { version = "0.6.0", features = ["sass", "mime03"]}
+
+[package]
+name = "juliankrieger-dev-v4"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+strip = "symbols"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.5.17"
+axum-extra = "0.3.7"
+axum-macros = "0.2.3"
+color-eyre = "0.6.2"
+comrak = "0.14.0"
+derive_more = "0.99.17"
+dotenvy = "0.15.6"
+gray_matter = "0.2.4"
+maud = { version = "0.24.0", features = ["axum"]}
+mime = "0.3.16"
+ructe = "0.15.0"
+serde = { version = "1.0.147", features = ["derive"]}
+serde_json = "1.0.87"
+serde_yaml = "0.9.14"
+syntect = "5.0.0"
+thiserror = "1.0.37"
+tokio = { version = "1.21.2", features = ["full"]}
+tower = { version = "0.4.13", features = ["full"]}
+tower-http = {version = "0.3.4", features = ["full"]}
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["fmt"] }
+
+[workspace]
+members = [
+  "./lib/*"
+]
+
+
